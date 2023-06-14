@@ -1,0 +1,15 @@
+User Manual
+
+Add a doctor and correct amount of patients with their insurance card numbers
+curl --request POST --data "data=MaryDr!2!Patient1!Hmo1!Patient2!Hmo2" http://localhost:8080/drpatients/resourcesDr/create
+
+Delete a doctor given the ID. 
+curl -X DELETE http://localhost:8080/drpatients/resourcesDr/delete/3
+
+Update (modify) a doctor's name only on an existing list of doctor-patients given the id and new name
+curl --request PUT --data "id=2&name=NewDoctorName" http://localhost:8080/drpatients/resourcesDr/update
+
+Get a list of an individual doctor and his/her patients in XML or Plain text given the ID of the doctor in a browser
+http://localhost:8080/drpatients/resourcesDr/plain/2
+http://localhost:8080/drpatients/resourcesDr/xml/2
+
